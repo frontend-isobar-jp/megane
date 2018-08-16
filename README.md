@@ -13,7 +13,7 @@ $ npm i -D megane
 $ npx cpx ./node_modules/megane/src/**/**/**/**/ ./src/ && npx cpx ./node_modules/megane/public/**/**/**/**/ ./public/
 ```
 
-## download ZIP
+## Download zip file
 [↓ download ZIP](https://github.com/frontend-isobar-jp/megane_download/blob/master/megane_download.zip?raw=true)
 
 ## Demo
