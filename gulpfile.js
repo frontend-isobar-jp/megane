@@ -7,6 +7,7 @@
 **/
 
 const ROOT_PATH = './public/';
+const package_json = require("./package");
 
 const SETTING = {
 
@@ -35,7 +36,21 @@ const SETTING = {
                 // 対象ディレクトリを増やす場合は、オブジェクトを追加する
             ]
         }
+    ],
+
+    'zip': [
+        {
+          'fileName' :"megane_download",// Name of output file
+          'version' :  "", // version of output file
+          'from' : [
+              './public/**/*',
+              './src/**/*',
+              // '!' + ROOT_PATH + '/node_modules'
+          ],
+          'to' : './' //output directry
+        }
     ]
+
 
 }
 
@@ -50,7 +65,7 @@ const gulp = require("gulp");
 
 const Sass = require("./gulp/sass");
 const BrowserSync = require("./gulp/browser-sync");
-
+const Zip = require("./gulp/zip");
 
 
 /**
@@ -65,6 +80,12 @@ gulp.task('sass', () => {
 
 gulp.task('serve', () => {
     BrowserSync(SETTING);
+});
+
+gulp.task('zip', () => {
+
+    Zip(SETTING);
+
 });
 
 gulp.task('build', () => {

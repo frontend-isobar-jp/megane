@@ -1,11 +1,12 @@
 {
-  "name": "megane_template",
+  "name": "megane-download",
   "version": "5.0.0",
   "description": "",
   "main": "",
   "scripts": {
     "start": "npx gulp",
-    "build": "npx gulp build"
+    "zip": "npx gulp zip",
+    "build": "npx gulp build && npx gulp zip"
   },
   "author": "Dentsu Isobar (https://github.com/frontend-isobar-jp)",
   "license": "MIT",
@@ -24,6 +25,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
+    "gulp-zip": "^4.2.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.0"
