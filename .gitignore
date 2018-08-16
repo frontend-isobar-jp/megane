@@ -17,3 +17,8 @@ wp-content/uploads/
 sitemap.xml
 sitemap.xml.gz
 sftp-config.json
+
+.npmignore
+package.json
+gulpfile.js
+gulp/
