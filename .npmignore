@@ -6,3 +6,4 @@ gulpfile.js
 docs/
 .gitignore
 gulp/
+*.zip

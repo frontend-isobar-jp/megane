@@ -44,8 +44,7 @@ const SETTING = {
           'version' :  "", // version of output file
           'from' : [
               './public/**/*',
-              './src/**/*',
-              // '!' + ROOT_PATH + '/node_modules'
+              './src/**/*'
           ],
           'to' : './' //output directry
         }
