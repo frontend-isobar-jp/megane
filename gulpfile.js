@@ -8,6 +8,7 @@
 
 const ROOT_PATH = './public/';
 const package_json = require("./package");
+const Copyfile = require("./gulp/copyfile");
 
 const SETTING = {
 
@@ -35,6 +36,17 @@ const SETTING = {
                 }
                 // 対象ディレクトリを増やす場合は、オブジェクトを追加する
             ]
+        }
+    ],
+
+    //copyFile
+    'copyFile': [
+        {
+            'from': [
+                '../megane_template/src/fw/**/*.scss',
+                // '!' + ROOT_PATH + '',
+            ],
+            'to': './src/fw/', //output directry
         }
     ],
 
@@ -81,10 +93,12 @@ gulp.task('serve', () => {
     BrowserSync(SETTING);
 });
 
+gulp.task('copyfile', () => {
+    Copyfile(SETTING);
+});
+
 gulp.task('zip', () => {
-
     Zip(SETTING);
-
 });
 
 gulp.task('build', () => {
@@ -114,6 +128,8 @@ gulp.task('watch', () => {
 
 const taskList = [
 
+    'copyfile',
+    'sass',
     'watch',
     'serve' // browser-sync
 

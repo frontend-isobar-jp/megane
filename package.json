@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npx gulp",
     "zip": "npx gulp zip",
-    "build": "npx gulp build && npx gulp zip"
+    "build": "npx gulp copyfile && npx gulp build && npx gulp zip"
   },
   "author": "Dentsu Isobar (https://github.com/frontend-isobar-jp)",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-if": "^2.0.2",
+    "gulp-ignore": "^2.0.2",
     "gulp-load-plugins": "^1.5.0",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
