@@ -47,7 +47,7 @@
 				//該当ブレイクポイント範囲のみ適用
 				@include only( $breakpointName ){
 
-					.f-display_#{$_breakpointName} { display: none; }
+					.f-display_#{$_breakpointName}:not(.f-display_#{$breakpointName}) { display: none; }
 
 					// 「_over」が複数呼ばれないように
 					@if $breakpointName != 'over' and $count == 0 {
