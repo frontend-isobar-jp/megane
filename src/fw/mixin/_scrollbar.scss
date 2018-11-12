@@ -6,7 +6,7 @@
 //
 // ---------------------------------------------------------------------------
 
-@mixin scrollbar( $bg:$black0, $color:$black20, $size:10 ) {
+@mixin scrollbar( $bg:#f7f7f7, $color:#DDD, $size:10 ) {
 
     &::-webkit-scrollbar-track{
         background: $bg;
@@ -18,5 +18,5 @@
         width: $size + px;
         height: $size + px;
     }
-    
+
 }
