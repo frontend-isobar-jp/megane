@@ -12,6 +12,7 @@ module.exports = (setting) => {
 	        open: false,
 	        notify: false,
 	        port: setting.bs[i].port,
+            // proxy: "localhost:8888",  //使用する際は 下記 "server" をコメントアウトする
 	        server: {
 	            baseDir: setting.rootPath
 	        }

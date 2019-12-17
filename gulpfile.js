@@ -27,7 +27,6 @@ const SETTING = {
 
     'sass': [
         {
-            'browser': ['last 2 versions'], // autoprefix version
             'outputStyle': 'compressed',// compile style
             'path': [
                 {
@@ -85,33 +84,38 @@ const Zip = require("./gulp/zip");
 **
 **/
 
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
     Sass(SETTING);
+    done();
 });
 
-gulp.task('serve', () => {
+gulp.task('serve', (done) => {
     BrowserSync(SETTING);
+    done();
 });
 
-gulp.task('copyfile', () => {
+gulp.task('copyfile', (done) => {
     Copyfile(SETTING);
+    done();
 });
 
-gulp.task('zip', () => {
+gulp.task('zip', (done) => {
     Zip(SETTING);
+    done();
 });
 
-gulp.task('build', () => {
+gulp.task('build', (done) => {
 
     Sass(SETTING,"prod");
+    done();
 
 });
 
 gulp.task('watch', () => {
 
-    SETTING.sass[0].path.forEach( function(e,i,entryPoint) {
+    SETTING.sass[0].path.forEach( function(e,i) {
 
-        gulp.watch(SETTING.sass[0].path[i].src + '*.scss', ['sass']);
+        gulp.watch(SETTING.sass[0].path[i].src + '*.scss', gulp.task("sass"));
 
     });
 
@@ -126,12 +130,11 @@ gulp.task('watch', () => {
 **
 **/
 
-const taskList = [
-
-    'copyfile',
-    'sass',
-    'watch',
-    'serve' // browser-sync
-
-]
-gulp.task('default', taskList);
+gulp.task(
+    "default",
+    gulp.series(gulp.parallel(
+        'copyfile',
+        'watch',
+        'serve' // browser-sync
+    ))
+);
