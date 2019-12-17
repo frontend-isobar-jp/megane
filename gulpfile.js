@@ -38,6 +38,16 @@ const SETTING = {
         }
     ],
 
+    'js': [
+        {
+            'src': './src/js/',
+            'dist': ROOT_PATH + 'assets/js/',
+            'fileName': [ // main file
+                'main.js'
+            ]
+        }
+    ],
+
     //copyFile
     'copyFile': [
         {
@@ -74,6 +84,7 @@ const SETTING = {
 const gulp = require("gulp");
 
 const Sass = require("./gulp/sass");
+const Scripts = require("./gulp/scripts");
 const BrowserSync = require("./gulp/browser-sync");
 const Zip = require("./gulp/zip");
 
@@ -86,6 +97,11 @@ const Zip = require("./gulp/zip");
 
 gulp.task('sass', (done) => {
     Sass(SETTING);
+    done();
+});
+
+gulp.task('scripts', (done) => {
+    Scripts(SETTING);
     done();
 });
 
@@ -107,6 +123,7 @@ gulp.task('zip', (done) => {
 gulp.task('build', (done) => {
 
     Sass(SETTING,"prod");
+    Scripts(SETTING,"prod");
     done();
 
 });
@@ -116,6 +133,12 @@ gulp.task('watch', () => {
     SETTING.sass[0].path.forEach( function(e,i) {
 
         gulp.watch(SETTING.sass[0].path[i].src + '*.scss', gulp.task("sass"));
+
+    });
+
+    SETTING.js.forEach( function(e,i) {
+
+        gulp.watch(SETTING.js[i].src + '**/*.js', gulp.task("scripts"));
 
     });
 

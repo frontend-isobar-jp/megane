@@ -33,5 +33,10 @@
     "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.11.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mgn-accordion": "0.0.7",
+    "mgn-menu": "0.0.2",
+    "mgn-ua": "0.0.0",
+    "mgn-utility": "0.0.0"
+  }
 }

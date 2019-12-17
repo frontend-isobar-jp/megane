@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.fw {
+
+    // ----------------------------------------------------------
+    // Footer
+    // ----------------------------------------------------------
+
+    .l-footer{
+        @include mt( 85px, 65px );
+        &__logo{
+            @include mb( 0, 30px );
+            display: inline-block;
+            img{
+                width: 200px;
+            }
+        }
+        &__nav{
+            @include only( m ){
+                .c-accordion{
+                    &__ttl{
+                        pointer-events: none;
+                        &:before,&:after{
+                            display: none !important;
+                        }
+                    }
+                    &__detail{
+                        max-height: inherit !important;
+                    }
+                }
+            }
+        }
+        &__copy{
+            @include pt( 25px, 20px );
+            text-align: center;
+        }
+    }
+
+}//.fw

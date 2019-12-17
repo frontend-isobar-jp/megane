@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// ---------------------------------------------------------------------------
+//
+// grid
+//
+// ---------------------------------------------------------------------------
+
+@mixin grid( $columns:auto, $rows:auto, $gap:0 ){
+
+	display: grid;
+
+	grid-template-columns: $columns;
+	grid-template-rows: $rows;
+
+	display: -ms-grid;
+	-ms-grid-columns: $columns;
+	-ms-grid-rows: $rows;
+
+	grid-gap: $gap;
+}
+
+
+// ---------------------------------------------------------------------------
+//
+// gridColumn
+//
+// ---------------------------------------------------------------------------
+
+@mixin gridColumn( $start:auto, $end:auto ){
+
+	@if $end == auto {
+
+		grid-column: $start;
+		-ms-grid-column: $start;
+
+	} @else {
+
+		grid-column: #{ $start } / #{ $end };
+		-ms-grid-column: $start;
+		-ms-grid-column-span: $end - $start;
+
+	}
+
+}
+
+
+// ---------------------------------------------------------------------------
+//
+// gridRow
+//
+// ---------------------------------------------------------------------------
+
+@mixin gridRow( $start:auto, $end:auto ){
+
+	@if $end == auto {
+
+		grid-row: $start;
+		-ms-grid-row: $start;
+
+	} @else {
+
+		grid-row: #{ $start } / #{ $end };
+		-ms-grid-row: $start;
+		-ms-grid-row-span: $end - $start;
+
+	}
+
+}

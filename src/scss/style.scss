@@ -1,34 +1,83 @@
 @charset "utf-8";
 
-// ----------------------------------------------------------
-// font-family,size,color,width, etc.
-// ----------------------------------------------------------
-@import "setting/setting";
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/setting/setting";
+@import "foundation/reset";
+
+// Megane Template Mixin
+@import "foundation/mixin/set_breakpoint";
+@import "foundation/mixin/media_query";
+@import "foundation/mixin/arrow";
+@import "foundation/mixin/clearfix";
+@import "foundation/mixin/grid";
+@import "foundation/mixin/menu_button";
+@import "foundation/mixin/column";
+@import "foundation/mixin/column_core";
+@import "foundation/mixin/diagonal_bg";
+@import "foundation/mixin/flex";
+@import "foundation/mixin/flex_core";
+@import "foundation/mixin/font_size";
+@import "foundation/mixin/form";
+@import "foundation/mixin/scrollbar";
+@import "foundation/mixin/gradients";
+@import "foundation/mixin/loading";
+@import "foundation/mixin/margin_padding";
+@import "foundation/mixin/position";
+@import "foundation/mixin/reset-text";
+@import "foundation/mixin/size";
+@import "foundation/mixin/transition";
+@import "foundation/mixin/triangle";
+@import "foundation/normalize";
 
 
-// ----------------------------------------------------------
-// Megane Template Core File
-// ----------------------------------------------------------
-@import "../fw/reset";
-@import "mixin";
-@import "base";
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@import "layout/layout";
+@import "layout/libs/swiper";
+@import "layout/header";
+@import "layout/footer";
 
 
-// ----------------------------------------------------------
-// Atomic Design
-// ----------------------------------------------------------
+// ==========================================================================
+// Object
+// ==========================================================================
 
-//Atoms
-@import "0_atoms/atoms";
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "object/component/accordion";
+@import "object/component/btn";
+@import "object/component/title";
 
-//Molecules
-@import "1_molecules/molecules";
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
 
-//Organisms
-@import "2_organisms/organisms";
+@import "object/project/home";
 
-//Templates
-@import "3_templates/templates";
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
 
-//Pages
-@import "4_pages/pages";
+// Megane Template Utility
+@import "object/utility/base_layout";
+
+.fw {
+
+    @import "object/utility/column";
+    @import "object/utility/flex";
+    @import "object/utility/font_size";
+    @import "object/utility/form";
+    @import "object/utility/list";
+    @import "object/utility/margin_padding";
+    @import "object/utility/table_layout";
+    @import "object/utility/table";
+    @import "object/utility/text";
+    @import "object/utility/box";
+
+}//.fw
