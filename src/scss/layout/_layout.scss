@@ -6,7 +6,7 @@
 	overflow: hidden;
 	font-family: $font_base;
 	color : $color_text;
-	font-size: $font-size_base + px;
+	@include fontSize( $font-size_base + px, $font-size_s + px );
 	line-height: $line-height_base;
 
 	#container {
@@ -39,7 +39,7 @@
 
 		.f-inner {
 			width: 100%;
-			margin: 0;
+			margin: 0 auto;
 			padding: 0 20px;
 		}
 

@@ -8,7 +8,6 @@ import HorizontalScroll from './_horizontal_scroll';
 import Accordion from './_accordion';
 import HoverTouch from './_hover_touch';
 
-
 ////
 
 const Init = () => {

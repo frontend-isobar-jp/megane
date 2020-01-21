@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+// ---------------------------------------------------------------------------
+//
+// Menu Button
+//
+// ---------------------------------------------------------------------------
+
+@mixin menu-button( $width: 20, $height: 14, $weight: 2, $color: $color_main ){
+
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: $width + px;
+    height: $height + px;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+    span {
+        display: inline-block;
+        transition: all 0.2s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: $weight + px;
+        background-color: $color;
+        backface-visibility: hidden;
+        &:nth-of-type(1) {
+            top: 0;
+        }
+        &:nth-of-type(2) {
+            top: 50%;
+            margin-top: - $weight / 2 + px;
+        }
+        &:nth-of-type(3) {
+            bottom: 0;
+        }
+    }
+
+}

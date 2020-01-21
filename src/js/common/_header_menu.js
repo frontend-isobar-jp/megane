@@ -25,13 +25,10 @@ export default () => {
 		);
 
 
-
-
 		const setOpenFunc = () => {
 
 			bodyYOffset = window.pageYOffset; // スクロール位置を保存
 
-			AddClass( document.getElementsByTagName('html')[0], 'is-gnav_displaying' ); // 状態判別用
 			AddClass( document.getElementsByTagName('html')[0], 'is-gnav_open' );
 
 			setTimeout( () => {
@@ -49,20 +46,21 @@ export default () => {
 			setTimeout( () => {
 				RemoveClass( document.getElementsByTagName('html')[0], 'is-gnav_open' );
 			},100 )
-
-			setTimeout( () => {
-				RemoveClass( document.getElementsByTagName('html')[0], 'is-gnav_displaying' ); // 状態判別用
-			},300 )
 		}
-
-
-
 
 		menu.OpenStart = () => {
 			setOpenFunc();
 		}
 		menu.CloseStart = () => {
 			setCloseFunc();
+		}
+
+		// リンクをクリックしたらMENU閉じる（同ページ内アンカーリンク対策）
+		let headerLink = document.querySelectorAll('.l-header__page a');
+		for (var i = 0; i < headerLink.length; i++) {
+			headerLink[i].addEventListener('click', () => {
+				menu.Close();
+			})
 		}
 
 	}

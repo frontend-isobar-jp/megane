@@ -6,14 +6,14 @@ const UA = new mgnUa();
 export default () => {
 
 	// ----------------------------------------------------------
-	// Hover class
+	// header horizontal scroll
 	// ----------------------------------------------------------
 
 	const TARGET = document.querySelectorAll('.l-header__inner')[0];
-	
+
 	const HeaderHorizontalScroll = ( left ) => {
 
-		TARGET.style.transform = 'translateX('+ -left +'px)';
+		TARGET.style.left = -left +'px';
 
 	}
 
