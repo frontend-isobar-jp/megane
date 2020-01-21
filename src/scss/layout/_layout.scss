@@ -9,18 +9,6 @@
 	@include fontSize( $font-size_base + px, $font-size_s + px );
 	line-height: $line-height_base;
 
-	#container {
-
-		#contents {
-			float: left;
-			width: $width_contents + px;
-			&.f-max { float: inherit; width: 100%; }
-		}
-
-		#side { width: $width_side + px; float: right; }
-
-	}
-
 	.f-inner {
 		display: block;
 		max-width: $width_main + px;
