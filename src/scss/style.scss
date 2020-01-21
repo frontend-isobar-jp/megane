@@ -6,31 +6,8 @@
 
 @import "foundation/setting/setting";
 @import "foundation/reset";
-
-// Megane Template Mixin
-@import "foundation/mixin/set_breakpoint";
-@import "foundation/mixin/media_query";
-@import "foundation/mixin/arrow";
-@import "foundation/mixin/clearfix";
-@import "foundation/mixin/grid";
-@import "foundation/mixin/menu_button";
-@import "foundation/mixin/column";
-@import "foundation/mixin/column_core";
-@import "foundation/mixin/diagonal_bg";
-@import "foundation/mixin/flex";
-@import "foundation/mixin/flex_core";
-@import "foundation/mixin/font_size";
-@import "foundation/mixin/form";
-@import "foundation/mixin/scrollbar";
-@import "foundation/mixin/gradients";
-@import "foundation/mixin/loading";
-@import "foundation/mixin/margin_padding";
-@import "foundation/mixin/position";
-@import "foundation/mixin/reset-text";
-@import "foundation/mixin/size";
-@import "foundation/mixin/transition";
-@import "foundation/mixin/triangle";
 @import "foundation/normalize";
+@import "foundation/mixin/mixin";
 
 
 // ==========================================================================
