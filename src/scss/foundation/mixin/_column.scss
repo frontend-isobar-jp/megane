@@ -5,7 +5,7 @@
 // Base Column
 //
 // ---------------------------------------------------------------------------
-@mixin column( $class: "f-col", $gutter: $col_gutter ){
+@mixin column( $class: "u-col", $gutter: $col_gutter ){
 
 	@include clearfix;
 	@include columnGutter( $gutter );
@@ -21,7 +21,7 @@
 // Column margin left and right
 //
 // ---------------------------------------------------------------------------
-@mixin columnMg( $class: "f-col" ){
+@mixin columnMg( $class: "u-col" ){
 
 	@include SetPerBreakpointMixin( $class, $mixin: 'columnMg' );
 
@@ -32,7 +32,7 @@
 // Column margin bottom
 //
 // ---------------------------------------------------------------------------
-@mixin columnMb( $class: "f-col" ){
+@mixin columnMb( $class: "u-col" ){
 
 	@include SetPerBreakpointMixin( $class, $mixin: 'columnMb' );
 

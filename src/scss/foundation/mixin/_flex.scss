@@ -24,7 +24,7 @@
 // ---------------------------------------------------------------------------
 
 
-@mixin flex( $class: "f-flex", $gutter: $col_gutter ){
+@mixin flex( $class: "u-flex", $gutter: $col_gutter ){
 
 
     @include flexGutter( $gutter );
@@ -40,7 +40,7 @@
 // ---------------------------------------------------------------------------
 
 
-@mixin flexMg( $class: "f-flex" ){
+@mixin flexMg( $class: "u-flex" ){
 
     @include SetPerBreakpointMixin( $class, $mixin: 'flexMg' );
 
@@ -52,7 +52,7 @@
 // Column margin bottom
 //
 // ---------------------------------------------------------------------------
-@mixin flexMb( $class: "f-flex" ){
+@mixin flexMb( $class: "u-flex" ){
 
     @include SetPerBreakpointMixin( $class, $mixin: 'flexMb' );
 
@@ -63,7 +63,7 @@
 // Order
 //
 // ---------------------------------------------------------------------------
-@mixin flexOrder( $class: "f-flex" ){
+@mixin flexOrder( $class: "u-flex" ){
 
     @include SetPerBreakpointMixin( $class, $mixin: 'flexOrder' );
 

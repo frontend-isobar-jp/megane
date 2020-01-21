@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utu-8";
 
 // ---------------------------------------------------------------------------
 //
@@ -8,28 +8,28 @@
 
 // Background
 // -----------------------------------------------------
-.f-box {
+.u-box {
 	background: $black0;
 	padding: 20px;
 }
 
 // Border
 // -----------------------------------------------------
-.f-box_solid {
+.u-box_solid {
 	border: 1px solid $black20;
 	padding: 20px;
 }
 
 // Dotted
 // -----------------------------------------------------
-.f-box_dotted {
+.u-box_dotted {
 	border: 1px dotted $black20;
 	padding: 20px;
 }
 
 // Dashed
 // -----------------------------------------------------
-.f-box_dashed {
+.u-box_dashed {
 	border: 1px dashed $black20;
 	padding: 20px;
 }

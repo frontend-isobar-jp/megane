@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utu-8";
 
 // ---------------------------------------------------------------------------
 //
@@ -6,7 +6,7 @@
 //
 // ---------------------------------------------------------------------------
 
-.f-form {
+.u-form {
 
 	// Reset
 	// -----------------------------------------------------
@@ -81,7 +81,7 @@
 		&:focus {
 			border: 1px solid $input_color;
 		}
-		&.f-form_inline {
+		&.u-form_inline {
 			width: inherit;
 		}
 	}
@@ -103,8 +103,8 @@
 	// Inline
 	// -----------------------------------------------------
 
-	.f-form_inline {
-		& + .f-form_inline {
+	.u-form_inline {
+		& + .u-form_inline {
 			@include ml( 10px );
 		}
 	}
@@ -113,9 +113,9 @@
 	// Radio / Checkbox
 	// -----------------------------------------------------
 
-	.f-form_label  {
+	.u-form_label  {
 
-		&.f-form_inline {
+		&.u-form_inline {
 			display: inline-block;
 		}
 
@@ -222,7 +222,7 @@
 	// Select
 	// -----------------------------------------------------
 
-	.f-form_select {
+	.u-form_select {
 		$selectArrow_size: 3;
 		width: 100%;
 		border: none;
@@ -248,7 +248,7 @@
 		&:after {
 			transform: rotate(135deg) translateY(-50%);
 		}
-		&.f-form_inline {
+		&.u-form_inline {
 			width: inherit;
 		}
 	}
@@ -286,7 +286,7 @@
 		&:focus {
 			border: 1px solid $input_color;
 		}
-		&.f-form_inline {
+		&.u-form_inline {
 			width: inherit;
 		}
 	}

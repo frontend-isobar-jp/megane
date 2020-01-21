@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utu-8";
 
 // ---------------------------------------------------------------------------
 //
@@ -8,18 +8,18 @@
 
 // Defalt
 // -----------------------------------------------------
-.f-table {
+.u-table {
 
 	display:table;
 	width: 100%;
 	table-layout: fixed;
 
-	> *:not(.f-table_row) {
+	> *:not(.u-table_row) {
 		display: table-cell;
 		vertical-align: middle;
 	}
 
-	> .f-table_row {
+	> .u-table_row {
 		display: table-row;
 		> * {
 			display: table-cell;
@@ -30,10 +30,10 @@
 
 }//.table
 
-.f-table,
-.f-table > .f-table_row {
+.u-table,
+.u-table > .u-table_row {
 
-	$class: "f-cell";
+	$class: "u-cell";
 
 	@include SetPerBreakpointMixin( $class, $mixin: 'tableCell' );
 

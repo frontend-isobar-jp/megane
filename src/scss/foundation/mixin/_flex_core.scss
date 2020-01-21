@@ -8,7 +8,7 @@ $col_width : 100/12/100;
 //
 // ---------------------------------------------------------------------------
 
-@mixin flexWidth( $class: "f-flex", $gutter: $col_gutter, $breakpoint: "" ){
+@mixin flexWidth( $class: "u-flex", $gutter: $col_gutter, $breakpoint: "" ){
 
     @for $i from 1 through 12 {
         >.#{$class}#{$i}#{$breakpoint} { width: calc( #{percentage($col_width*$i)} - #{$gutter}px ); }

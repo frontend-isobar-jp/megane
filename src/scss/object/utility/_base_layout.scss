@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utu-8";
 
 .fw  {
 
@@ -37,11 +37,11 @@
 				//該当ブレイクポイント範囲のみ適用
 				@include only( $breakpointName ){
 
-					.f-display_#{$_breakpointName}:not(.f-display_#{$breakpointName}) { display: none; }
+					.u-display_#{$_breakpointName}:not(.u-display_#{$breakpointName}) { display: none; }
 
 					// 「_over」が複数呼ばれないように
 					@if $breakpointName != 'over' and $count == 0 {
-						.f-display_over { display: none; }
+						.u-display_over { display: none; }
 						$count: $count + 1;
 					}
 

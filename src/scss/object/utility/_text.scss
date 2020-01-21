@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utu-8";
 // ---------------------------------------------------------------------------
 //
 // Text
@@ -8,20 +8,20 @@
 // ----------------------------------------------------------
 // Align
 // ----------------------------------------------------------
-.f-txt_left { text-align: left !important; }
-.f-txt_center { text-align: center !important; }
-.f-txt_right { text-align: right !important; }
+.u-txt_left { text-align: left !important; }
+.u-txt_center { text-align: center !important; }
+.u-txt_right { text-align: right !important; }
 
 // ----------------------------------------------------------
 // Text Color
 // ----------------------------------------------------------
 @each $key, $value in $colors {
-	.f-txt_#{$key} { color: #{$value} !important;}
+	.u-txt_#{$key} { color: #{$value} !important;}
 }
 
 // ----------------------------------------------------------
 // Letter Spacing
 // ----------------------------------------------------------
-.f-space_s { letter-spacing: -0.02em !important; }
-.f-space_m { letter-spacing: 0.03em !important;}
-.f-space_l { letter-spacing: 0.08em !important;}
+.u-space_s { letter-spacing: -0.02em !important; }
+.u-space_m { letter-spacing: 0.03em !important;}
+.u-space_l { letter-spacing: 0.08em !important;}

@@ -7,7 +7,7 @@ $col_width : 100/12/100;
 // Column width
 //
 // ---------------------------------------------------------------------------
-@mixin columnWidth( $class: "f-col", $breakpoint: "" ){
+@mixin columnWidth( $class: "u-col", $breakpoint: "" ){
 
 	@for $i from 1 through 12 {
 		>.#{$class}#{$i}#{$breakpoint} { width: percentage($col_width*$i); }
