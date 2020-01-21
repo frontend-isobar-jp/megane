@@ -5,7 +5,7 @@ html{
 	overflow: auto;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	
+
 }
 .fw  {
 
@@ -23,12 +23,6 @@ html{
 		max-width: 100%;
 		height:auto;
 		vertical-align: middle;
-	}
-	section {
-		@include clearfix;
-		&.f-section {
-			margin-top: $section_margin_top + px;
-		}
 	}
 	sup {
 		vertical-align: super;
