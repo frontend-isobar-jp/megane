@@ -1,7 +1,7 @@
 import { AddClass, RemoveClass, GetParents } from 'mgn-utility';
 import mgnUa from 'mgn-ua';
 
-import ShowPagetop from './_show_pagetop';
+import Scrolldown from './_scrolldown';
 import SetTransition from './_set_transition';
 import HeaderMenu from './_header_menu';
 import HorizontalScroll from './_horizontal_scroll';
@@ -13,14 +13,21 @@ import HoverTouch from './_hover_touch';
 const Init = () => {
 
     // ----------------------------------------------------------
-    // HoverTouch ( タッチもしくはホバー時にclass )
+    // Scrolldown ( 一定量スクロールした時に<html>にclass追加 )
+    // ----------------------------------------------------------
+
+    Scrolldown();
+
+
+    // ----------------------------------------------------------
+    // HoverTouch ( タッチもしくはホバー時に対象要素にclass追加 )
     // ----------------------------------------------------------
 
     HoverTouch();
 
 
     // ----------------------------------------------------------
-    // SetTransition ( デバイス毎のtransition専用class )
+    // SetTransition ( ウインドウサイズを判別して<html>にtransition用のclass追加 )
     // ----------------------------------------------------------
 
     SetTransition();

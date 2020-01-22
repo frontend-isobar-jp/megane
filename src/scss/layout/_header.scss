@@ -423,7 +423,7 @@ body{
         &__menubtn{
 
             $width: 20; // アイコン横幅
-            $height: 20; // アイコン縦幅
+            $height: 16; // アイコン縦幅
             $weight: 2; // ラインの太さ
 
             width: 50px;
@@ -471,7 +471,7 @@ body{
                     .l-header__menubtn__inner{
                         span{
                             &:before, &:after {
-                                background: #fff;
+                                background: $color_main;
                             }
                             &:nth-of-type(1) {
                                 transform: translateY(0px) scale(0);
