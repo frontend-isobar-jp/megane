@@ -13,7 +13,7 @@
 		color: $color_link;
 	}
 
-	.f-inner {
+	.l-inner {
 		display: block;
 		max-width: $width_main + px;
 		margin: 0 auto;
@@ -21,15 +21,13 @@
 		@include clearfix;
 	}
 
-	.clearfix { @include clearfix; }
-
-
+	
 	// -------------------------------------------
 	// Small Width Layout
 	// -------------------------------------------
 	@include max( $width_main ){
 
-		.f-inner {
+		.l-inner {
 			width: 100%;
 			margin: 0 auto;
 			padding: 0 20px;
@@ -44,16 +42,6 @@
 	@include max( s ){
 
 		min-width: 320px;
-
-		#container {
-
-			#contents {
-				float: inherit; width: 100%;
-				&.f-max { float: inherit; width: 100%; }
-			}
-			#side { width: initial; float: inherit; }
-
-		}
 
 	}
 
