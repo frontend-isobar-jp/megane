@@ -7,25 +7,62 @@
     // ----------------------------------------------------------
 
     .l-footer{
-        @include mt( 85px, 65px );
-        &__logo{
-            @include mb( 0, 30px );
-            display: inline-block;
-            img{
-                width: 200px;
-            }
-        }
+        @include pd( 40px 0, 20px 0 );
+        background-color: $black0;
         &__nav{
             @include only( m ){
-                .c-accordion{
-                    &__ttl{
+                //メガメニュー設定
+                .j-accordion_menu{
+                    .parents{
                         pointer-events: none;
-                        &:before,&:after{
-                            display: none !important;
+                        padding-bottom: 10px;
+                    }
+                    .child{
+                        max-height: inherit !important;
+                    }
+                }
+            }
+            @include only( s ){
+                & > ul{
+                    & > li{
+                        & > .parents,
+                        & > a {
+                            padding: 10px 0;
+                            border-bottom: 1px solid $black30;
+                            display: block;
                         }
                     }
-                    &__detail{
-                        max-height: inherit !important;
+                }
+                //メガメニュー設定
+                .j-accordion_menu{
+                    .parents{
+                        position: relative;
+                        &:before,
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 10px;
+                            height: 1px;
+                            background-color: #000;
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                        }
+                        &:after{
+                            transform: rotate(270deg);
+                            transition: 0.4s;
+                            backface-visibility: hidden;
+                        }
+                        &.active{
+                            &:after{
+                                transform: rotate(0);
+                            }
+                        }
+                    }
+                    .child{
+                        ul{
+                            padding: 10px;
+                        }
                     }
                 }
             }

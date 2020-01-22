@@ -9,6 +9,10 @@
 	@include fontSize( $font-size_base + px, $font-size_s + px );
 	line-height: $line-height_base;
 
+	a{
+		color: $color_link;
+	}
+
 	.f-inner {
 		display: block;
 		max-width: $width_main + px;

@@ -8,11 +8,11 @@ export default () => {
 
 
     let accordionFooter = new mgnAccordion(
-        ".j-accordion",
+        ".j-accordion_menu",
         {
             toggleSpeed: 200,
-            btnElm: "dt",
-            detailElm: "dd"
+            btnElm: ".parents",
+            detailElm: ".child"
         }
     );
 }

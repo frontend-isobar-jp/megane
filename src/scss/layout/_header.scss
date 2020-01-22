@@ -38,7 +38,6 @@ body{
 
 
     a{
-        color: $color_text;
         text-decoration: none;
     }
 
@@ -59,15 +58,16 @@ body{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #fff;
+            background-color: $black0;
             min-width: $width_main + px;
         }
 
         &__logo{
             margin-left: 30px;
             margin-right: 30px;
-            width: 40px;
+            width: 120px;
             display: block;
+            line-height: 1;
             img{
                 vertical-align: top;
             }
@@ -90,14 +90,15 @@ body{
         &__page{
             padding-right: 15px;
             font-weight: bold;
-            position: relative;
-            z-index: 1;
             display: flex;
             align-items: center;
             flex: 1 1 auto;
 
             li{
                 padding: 0 12px;
+                height: $headerH_m + px;
+                display: flex;
+                align-items: center;
                 &.is-active{
                     a{
                         color: $color_main !important;
@@ -106,7 +107,32 @@ body{
                         }
                     }
                 }
-                a{
+                //メガメニュー設定
+                &.j-accordion_menu{
+                    .child{
+                        transition: opacity 0.2s;
+                        opacity: 0;
+                        pointer-events: none;
+                        overflow: auto !important;
+                        max-height: inherit !important;
+                        position: absolute;
+                        left: 0;
+                        top: $headerH_m + px;
+                        background: $black10;
+                        width: 100%;
+                        ul{
+                            padding: 15px;
+                            display: flex;
+                            align-items: center;
+                            flex-wrap: wrap;
+                        }
+                    }
+                    &:hover{
+                        .child{
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                    }
                 }
             }
         }
@@ -225,18 +251,20 @@ body{
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            background-color: #fff;
+            background-color: $black0;
             position: fixed;
             left: 0;
             top: 0;
             z-index: 10;
+
         }
 
         &__logo{
-            margin-left: 15px;
+            margin-left: $padding_s + px;
             margin-right: 0;
-            width: 40px;
+            width: 100px;
             display: block;
+            line-height: 1;
             img{
                 vertical-align: top;
             }
@@ -246,7 +274,7 @@ body{
             z-index: 1;
             width: 100%;
             min-height: 100vh;
-            padding: #{$headerH_s + 34 + px} 40px 100px;
+            padding: #{$headerH_s + $padding_s + px} $padding_s + px 100px; // iOSのコントロールバーの高さを考慮し pb100px を設定
             box-sizing: border-box;
             opacity: 0;
             pointer-events: none;
@@ -265,6 +293,39 @@ body{
                         @for $i from 1 through 20 {
                             &:nth-child(#{$i}){
                                 transition-delay: $i * 0.05s;
+                            }
+                        }
+
+                        //メガメニュー設定
+                        &.j-accordion_menu{
+                            .parents{
+                                position: relative;
+                                &:before,
+                                &:after{
+                                    content: "";
+                                    display: block;
+                                    width: 10px;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 50%;
+                                }
+                                &:after{
+                                    transform: rotate(270deg);
+                                    transition: 0.4s;
+                                    backface-visibility: hidden;
+                                }
+                                &.active{
+                                    &:after{
+                                        transform: rotate(0);
+                                    }
+                                }
+                            }
+                            .child{
+                                ul{
+                                    padding: 10px $padding_s + px;
+                                }
                             }
                         }
                     }
@@ -289,14 +350,6 @@ body{
                     color: #fff;
                     display: inline-block;
                 }
-                &.is-active{
-                    a{
-                        // color: $color_main !important;
-                        &:before{
-                            width: 100%;
-                        }
-                    }
-                }
             }
         }
 
@@ -308,12 +361,18 @@ body{
         }
 
         &__lang{
+            position: fixed;
+            right: $headerH_s + px;
+            top: 0;
+            height: $headerH_s + px;
             padding: 0 20px;
             display: flex;
+            align-items: center;
+            z-index: 10;
             li{
-                color: #fff;
+                // color: #fff;
                 a{
-                    color: #fff;
+                    // color: #fff;
                     transition: color .2s;
                 }
                 &:after{
@@ -328,7 +387,7 @@ body{
                 }
                 &:not(.is-active){
                     a{
-                        color: $black50;
+                        color: $black30;
                     }
                 }
             }
@@ -566,58 +625,6 @@ body{
                 }
             }
 
-
-        }
-
-
-        &__sub{
-            &__nav{
-                height: 68px;
-                overflow: hidden;
-            }
-            &__page{
-                height: 100px;
-                padding: 0 4vw 32px;
-                display: flex;
-                align-items: center;
-                background-color: $color_sub;
-                margin: 0 -1vw;
-                overflow-x: scroll;
-                li{
-                    padding: 0 1vw;
-                    &.is-active{
-                        a{
-                            color: $color_main !important;
-                            span{
-                                &:before{
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    a{
-                        width: 28vw;
-                        display: block;
-                        text-align: center;
-                        font-size: 3.5vw;
-                        line-height: 126%;
-                        @include min( 415 ){
-                            width: 26vw;
-                            font-size: 3vw;
-                        }
-                        @include min( 600 ){
-                            width: 19vw;
-                            font-size: 2.2vw;
-                        }
-                        span{
-                            word-break: break-word;
-                        }
-                    }
-                    &:last-child{
-                        padding-right: 10vw;
-                    }
-                }
-            }
         }
 
     }
