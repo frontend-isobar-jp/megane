@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.fw {
+
+	min-width: $width_main + px;
+	overflow: hidden;
+	font-family: $font_base;
+	color : $color_text;
+	@include fontSize( $font-size_base + px, $font-size_s + px );
+	line-height: $line-height_base;
+
+	a{
+		color: $color_link;
+	}
+
+	.l-inner {
+		display: block;
+		max-width: $width_main + px;
+		margin: 0 auto;
+		padding: 0;
+		@include clearfix;
+	}
+
+	
+	// -------------------------------------------
+	// Small Width Layout
+	// -------------------------------------------
+	@include max( $width_main ){
+
+		.l-inner {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+
+	}
+
+
+	// -------------------------------------------
+	// Liquid Layout
+	// -------------------------------------------
+	@include max( s ){
+
+		min-width: 320px;
+
+	}
+
+
+}//.fw
