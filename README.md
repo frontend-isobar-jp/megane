@@ -17,7 +17,7 @@ $ npm i mgn-menu mgn-ua mgn-utility mgn-accordion mgn-smooth-scroll -S
 ```
 
 ## Download zip file
-[↓ download ZIP](https://github.com/frontend-isobar-jp/megane_download/blob/master/megane_download.zip?raw=true)
+[↓ download ZIP](https://github.com/frontend-isobar-jp/megane/blob/master/megane.zip?raw=true)
 
 ## Demo
-[https://frontend-isobar-jp.github.io/megane_download/public/](https://frontend-isobar-jp.github.io/megane_download/public/)
+[https://frontend-isobar-jp.github.io/megane/public/](https://frontend-isobar-jp.github.io/megane/public/)

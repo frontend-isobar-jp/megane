@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://frontend-isobar-jp@github.com/frontend-isobar-jp/megane_download.git"
+    "url": "git+https://frontend-isobar-jp@github.com/frontend-isobar-jp/megane.git"
   },
   "bugs": {
-    "url": "https://github.com/frontend-isobar-jp/megane_download/issues"
+    "url": "https://github.com/frontend-isobar-jp/megane/issues"
   },
-  "homepage": "https://github.com/frontend-isobar-jp/megane_download#readme",
+  "homepage": "https://github.com/frontend-isobar-jp/megane#readme",
   "dependencies": {
     "mgn-accordion": "0.0.7",
     "mgn-menu": "0.0.2",
