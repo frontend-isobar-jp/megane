@@ -1,15 +1,13 @@
 {
   "name": "megane",
-  "version": "5.0.4",
+  "version": "6.0.0",
   "description": "",
   "main": "",
   "scripts": {
-    "start": "npx gulp",
-    "zip": "npx gulp zip",
-    "build": "npx gulp copyfile && npx gulp build && npx gulp zip"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Dentsu Isobar (https://github.com/frontend-isobar-jp)",
-  "license": "MIT",
+  "author": "frontend-isobar-jp <frontend.isobar.jp@gmail.com> (https://github.com/frontend-isobar-jp)",
+  "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -30,15 +28,10 @@
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://frontend-isobar-jp@github.com/frontend-isobar-jp/megane_download.git"
   },
-  "author": "frontend-isobar-jp <frontend.isobar.jp@gmail.com> (https://github.com/frontend-isobar-jp)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/frontend-isobar-jp/megane_download/issues"
   },
