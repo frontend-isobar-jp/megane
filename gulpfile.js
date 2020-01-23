@@ -49,7 +49,7 @@ const SETTING = {
 
     'zip': [
         {
-          'fileName' :"megane-" + package_json.version ,// Name of output file
+          'fileName' :"megane" ,// Name of output file
           'version' :  "", // version of output file
           'from' : [
               './public/**/*',
