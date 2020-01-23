@@ -8,7 +8,6 @@
 
 const ROOT_PATH = './public/';
 const package_json = require("./package");
-// const Copyfile = require("./gulp/copyfile");
 
 const SETTING = {
 
@@ -47,17 +46,6 @@ const SETTING = {
             ]
         }
     ],
-
-    //copyFile
-    // 'copyFile': [
-    //     {
-    //         'from': [
-    //             '../megane_template/src/fw/**/*.scss',
-    //             // '!' + ROOT_PATH + '',
-    //         ],
-    //         'to': './src/fw/', //output directry
-    //     }
-    // ],
 
     'zip': [
         {
@@ -110,11 +98,6 @@ gulp.task('serve', (done) => {
     done();
 });
 
-// gulp.task('copyfile', (done) => {
-//     Copyfile(SETTING);
-//     done();
-// });
-
 gulp.task('zip', (done) => {
     Zip(SETTING);
     done();
@@ -156,7 +139,6 @@ gulp.task('watch', () => {
 gulp.task(
     "default",
     gulp.series(gulp.parallel(
-        // 'copyfile',
         'watch',
         'serve' // browser-sync
     ))
