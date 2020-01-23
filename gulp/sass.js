@@ -25,7 +25,6 @@ module.exports = (setting,buildType) => {
         }).on('error', $.sass.logError))
 
         .pipe($.autoprefixer({
-            browsers: setting.sass[0].browser,
             cascade: false,
             grid: false
         }))

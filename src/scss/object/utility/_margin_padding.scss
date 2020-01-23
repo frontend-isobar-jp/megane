@@ -1,0 +1,52 @@
+@charset "utu-8";
+
+// ---------------------------------------------------------------------------
+//
+// Margin / Padding
+//
+// ---------------------------------------------------------------------------
+
+// ----------------------------------------------------------
+// Margin
+// ----------------------------------------------------------
+
+@for $i from 0 through 16 {
+	.u-mg#{$i * 5}  { margin: 5px * $i !important; }
+}
+
+@for $i from 0 through 16 {
+	.u-mt#{$i * 5}  { margin-top: 5px * $i !important; }
+}
+
+@for $i from 0 through 16 {
+	.u-mr#{$i * 5}  { margin-right: 5px * $i !important; }
+}
+
+@for $i from 0 through 16 {
+	.u-mb#{$i * 5}  { margin-bottom: 5px * $i !important; }
+}
+
+@for $i from 0 through 16 {
+	.u-ml#{$i * 5}  { margin-left: 5px * $i !important; }
+}
+
+
+// ----------------------------------------------------------
+// Padding
+// ----------------------------------------------------------
+@for $i from 0 through 16 {
+	.u-pd#{$i * 5}  { padding: 5px * $i !important; }
+}
+
+@for $i from 0 through 16 {
+	.u-pt#{$i * 5}  { padding-top: 5px * $i !important; }
+}
+@for $i from 0 through 16 {
+	.u-pr#{$i * 5}  { padding-right: 5px * $i !important; }
+}
+@for $i from 0 through 16 {
+	.u-pb#{$i * 5}  { padding-bottom: 5px * $i !important; }
+}
+@for $i from 0 through 16 {
+	.u-pl#{$i * 5}  { padding-left: 5px * $i !important; }
+}

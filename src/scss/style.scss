@@ -1,34 +1,59 @@
 @charset "utf-8";
 
-// ----------------------------------------------------------
-// font-family,size,color,width, etc.
-// ----------------------------------------------------------
-@import "setting/setting";
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/setting/setting";
+@import "foundation/reset";
+@import "foundation/normalize";
+@import "foundation/mixin/mixin";
 
 
-// ----------------------------------------------------------
-// Megane Template Core File
-// ----------------------------------------------------------
-@import "../fw/reset";
-@import "mixin";
-@import "base";
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+@import "layout/layout";
+@import "layout/libs/swiper";
+@import "layout/header";
+@import "layout/footer";
 
 
-// ----------------------------------------------------------
-// Atomic Design
-// ----------------------------------------------------------
+// ==========================================================================
+// Object
+// ==========================================================================
 
-//Atoms
-@import "0_atoms/atoms";
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+@import "object/component/btn";
+@import "object/component/title";
 
-//Molecules
-@import "1_molecules/molecules";
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
 
-//Organisms
-@import "2_organisms/organisms";
+@import "object/project/home";
 
-//Templates
-@import "3_templates/templates";
+// -----------------------------------------------------------------
+// Utility
+// -----------------------------------------------------------------
 
-//Pages
-@import "4_pages/pages";
+// Megane Template Utility
+@import "object/utility/base_layout";
+
+.fw {
+
+    @import "object/utility/column";
+    @import "object/utility/flex";
+    @import "object/utility/font_size";
+    @import "object/utility/form";
+    @import "object/utility/list";
+    @import "object/utility/margin_padding";
+    @import "object/utility/table_layout";
+    @import "object/utility/table";
+    @import "object/utility/text";
+    @import "object/utility/box";
+
+}//.fw

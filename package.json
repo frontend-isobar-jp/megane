@@ -11,25 +11,43 @@
   "author": "Dentsu Isobar (https://github.com/frontend-isobar-jp)",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babelify": "^8.0.0",
-    "browser-sync": "^2.24.6",
-    "browserify": "^16.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-changed": "^3.2.0",
-    "gulp-if": "^2.0.2",
-    "gulp-ignore": "^2.0.2",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-plumber": "^1.2.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1",
-    "gulp-zip": "^4.2.0",
+    "browser-sync": "^2.26.7",
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-ignore": "^3.0.0",
+    "gulp-load-plugins": "^2.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify-es": "^2.0.0",
+    "gulp-zip": "^5.0.1",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "watchify": "^3.11.0"
+    "vinyl-source-stream": "^2.0.0"
   },
-  "dependencies": {}
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://frontend-isobar-jp@github.com/frontend-isobar-jp/megane_download.git"
+  },
+  "author": "frontend-isobar-jp <frontend.isobar.jp@gmail.com> (https://github.com/frontend-isobar-jp)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontend-isobar-jp/megane_download/issues"
+  },
+  "homepage": "https://github.com/frontend-isobar-jp/megane_download#readme",
+  "dependencies": {
+    "mgn-accordion": "0.0.7",
+    "mgn-menu": "0.0.2",
+    "mgn-smooth-scroll": "0.0.1",
+    "mgn-ua": "0.0.0",
+    "mgn-utility": "0.0.0"
+  }
 }

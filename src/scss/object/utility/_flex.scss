@@ -1,0 +1,27 @@
+@charset "utu-8";
+
+// ---------------------------------------------------------------------------
+//
+// Flex
+//
+// ---------------------------------------------------------------------------
+
+.u-flex{
+
+	@include flexBase();
+	@include flex();
+	@include flexMg();
+	@include flexMb();
+	@include flexOrder();
+
+	&.u-flex_middle {
+		@include flexBase( $align: "center" );
+	}
+
+	&.u-flex_justify {
+		& > * {
+			flex: 1;
+		}
+	}
+
+}

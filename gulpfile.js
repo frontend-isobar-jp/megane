@@ -8,7 +8,6 @@
 
 const ROOT_PATH = './public/';
 const package_json = require("./package");
-const Copyfile = require("./gulp/copyfile");
 
 const SETTING = {
 
@@ -27,7 +26,6 @@ const SETTING = {
 
     'sass': [
         {
-            'browser': ['last 2 versions'], // autoprefix version
             'outputStyle': 'compressed',// compile style
             'path': [
                 {
@@ -39,14 +37,13 @@ const SETTING = {
         }
     ],
 
-    //copyFile
-    'copyFile': [
+    'js': [
         {
-            'from': [
-                '../megane_template/src/fw/**/*.scss',
-                // '!' + ROOT_PATH + '',
-            ],
-            'to': './src/fw/', //output directry
+            'src': './src/js/',
+            'dist': ROOT_PATH + 'assets/js/',
+            'fileName': [ // main file
+                'main.js'
+            ]
         }
     ],
 
@@ -75,6 +72,7 @@ const SETTING = {
 const gulp = require("gulp");
 
 const Sass = require("./gulp/sass");
+const Scripts = require("./gulp/scripts");
 const BrowserSync = require("./gulp/browser-sync");
 const Zip = require("./gulp/zip");
 
@@ -85,33 +83,45 @@ const Zip = require("./gulp/zip");
 **
 **/
 
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
     Sass(SETTING);
+    done();
 });
 
-gulp.task('serve', () => {
+gulp.task('scripts', (done) => {
+    Scripts(SETTING);
+    done();
+});
+
+gulp.task('serve', (done) => {
     BrowserSync(SETTING);
+    done();
 });
 
-gulp.task('copyfile', () => {
-    Copyfile(SETTING);
-});
-
-gulp.task('zip', () => {
+gulp.task('zip', (done) => {
     Zip(SETTING);
+    done();
 });
 
-gulp.task('build', () => {
+gulp.task('build', (done) => {
 
     Sass(SETTING,"prod");
+    Scripts(SETTING,"prod");
+    done();
 
 });
 
 gulp.task('watch', () => {
 
-    SETTING.sass[0].path.forEach( function(e,i,entryPoint) {
+    SETTING.sass[0].path.forEach( function(e,i) {
 
-        gulp.watch(SETTING.sass[0].path[i].src + '*.scss', ['sass']);
+        gulp.watch(SETTING.sass[0].path[i].src + '*.scss', gulp.task("sass"));
+
+    });
+
+    SETTING.js.forEach( function(e,i) {
+
+        gulp.watch(SETTING.js[i].src + '**/*.js', gulp.task("scripts"));
 
     });
 
@@ -126,12 +136,10 @@ gulp.task('watch', () => {
 **
 **/
 
-const taskList = [
-
-    'copyfile',
-    'sass',
-    'watch',
-    'serve' // browser-sync
-
-]
-gulp.task('default', taskList);
+gulp.task(
+    "default",
+    gulp.series(gulp.parallel(
+        'watch',
+        'serve' // browser-sync
+    ))
+);

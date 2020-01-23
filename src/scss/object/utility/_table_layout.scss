@@ -1,0 +1,40 @@
+@charset "utu-8";
+
+// ---------------------------------------------------------------------------
+//
+// Table Layout
+//
+// ---------------------------------------------------------------------------
+
+// Defalt
+// -----------------------------------------------------
+.u-table {
+
+	display:table;
+	width: 100%;
+	table-layout: fixed;
+
+	> *:not(.u-table_row) {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	> .u-table_row {
+		display: table-row;
+		> * {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+
+}//.table
+
+.u-table,
+.u-table > .u-table_row {
+
+	$class: "u-cell";
+
+	@include SetPerBreakpointMixin( $class, $mixin: 'tableCell' );
+
+}//.table

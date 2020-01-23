@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width">
     <meta name="format-detection" content="telephone=no">
 
-    <title>Template</title>
+    <title>PAGE TITLE</title>
     <meta name="description" content="">
 
     <!-- ICON -->
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- <link rel="apple-touch-icon-precomposed" href="/webclip.png"> -->
-    <!-- <meta name="apple-mobile-web-app-title" content="Template"> -->
+    <!-- <meta name="apple-mobile-web-app-title" content="PAGE TITLE"> -->
 
     <!-- OGP -->
     <meta property="og:locale" content="ja_JP">
@@ -23,135 +23,118 @@
     <meta property="og:site_name" content="">
     <meta property="og:description" content="">
 
-    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
 </head>
 
 <body class="fw">
 
-    <header>
-        <div class="f-inner">
-            header
+    <header class="l-header">
+
+        <div class="l-header__inner">
+
+            <div class="l-header__bar">
+
+                <a href="/" class="l-header__logo">
+                    <img src="https://www.dentsuisobar.com/wp-content/themes/isobar/images/common/logo.svg" alt="">
+                </a>
+                <!-- /.l-header__logo -->
+
+                <div class="l-header__icon">
+
+                    <a class="l-header__menubtn menu1 j-menu">
+                        <div class="l-header__menubtn__inner">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
+                    </a>
+                    <!-- /.l-header__menubtn -->
+                </div>
+                <!-- /.l-header__icon -->
+
+            </div>
+            <!-- /.l-header__bar -->
+
+            <nav class="l-header__nav j-menu_gnav">
+
+                <!-- ▼▼▼ ハンバーガーメニューに格納 ▼▼▼ -->
+
+                <ul class="l-header__page">
+
+                    <li>
+                        <a href="#">メニュー1</a>
+                    </li>
+                    <li>
+                        <a href="#">メニュー2</a>
+                    </li>
+                    <li class="j-accordion_menu">
+                        <div class="parents">
+                            <a href="#">メニュー3</a>
+                        </div>
+                        <div class="child">
+                            <ul>
+                                <li><a href="#">メニュー3-1</a></li>
+                                <li><a href="#">メニュー3-2</a></li>
+                                <li><a href="#">メニュー3-3</a></li>
+                                <li><a href="#">メニュー3-4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="j-accordion_menu">
+                        <div class="parents">
+                            <a href="#">メニュー4</a>
+                        </div>
+                        <div class="child">
+                            <ul>
+                                <li><a href="#">メニュー4-1</a></li>
+                                <li><a href="#">メニュー4-2</a></li>
+                                <li><a href="#">メニュー4-3</a></li>
+                                <li><a href="#">メニュー4-4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- /.l-header__page -->
+
+
+                <div class="l-header__control">
+                    <ul class="l-header__link">
+                        <li><a href="#">新規登録</a></li>
+                        <li><a href="#">ログイン</a></li>
+                    </ul>
+                    <!-- /.l-header__link -->
+                </div>
+                <!-- /.l-header__control -->
+
+                <!-- ▲▲▲ ハンバーガーメニューに格納 ▲▲▲ -->
+
+            </nav>
+            <!-- /.l-header__nav -->
+
+            <!-- ▼▼▼ ハンバーガーメニュー格納しない ▼▼▼ -->
+            <ul class="l-header__lang">
+                <li class="is-active"><a href="#">JA</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+            <!-- /.l-header__lang -->
+            <!-- ▲▲▲ ハンバーガーメニュー格納しない ▲▲▲ -->
+
         </div>
+        <!-- /.l-header__inner -->
+
     </header>
     <!-- /header -->
 
     <div id="container">
 
-        <main id="contents" class="f-max">
+        <main id="contents">
 
-            <section class="f-section">
+            <section>
 
-                <div class="f-inner">
+                <div class="l-inner">
 
-                    <h2>Flex</h2>
-
-                    <div class="f-flex f-flex_mg40 f-flex_mb40_m">
-                        <div class="f-flex3 f-flex6_m f-flex12_s f-box_solid">
-                            <p>f-flex3 f-flex6_m f-flex12_s</p>
-                            <div class="f-flex">
-                                <div class="f-flex6 f-box f-box_solid">Text text text text text text text</div>
-                                <div class="f-flex6 f-box f-box_solid">f-flex6</div>
-                            </div>
-                        </div>
-                        <div class="f-flex3 f-flex6_m f-flex12_s f-box_solid">
-                            <p>f-flex3 f-flex6_m f-flex12_s</p>
-                            <div class="f-flex">
-                                <div class="f-flex6 f-box f-box_solid">Text text text</div>
-                                <div class="f-flex6 f-box f-box_solid">f-flex6</div>
-                            </div>
-                        </div>
-                        <div class="f-flex3 f-flex6_m f-flex12_s f-box_solid">ff-flex3 f-flex6_m f-flex12_s</div>
-                        <div class="f-flex3 f-flex6_m f-flex12_s f-box_solid">f-flex3 f-flex6_m f-flex12_s</div>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <section class="f-section">
-
-                <div class="f-inner">
-
-                    <h2>Column</h2>
-
-                    <div class="f-col f-col_mg80 f-col_mg20_m f-col_mg20_s f-col_mb10_s">
-                        <div class="f-col6 f-col12_s"><div class="f-box f-box_solid">col6 f-col12_s</div></div>
-                        <div class="f-col6 f-col12_s"><div class="f-box f-box_solid">col6 f-col12_s</div></div>
-                        <div class="f-col6 f-col12_s"><div class="f-box f-box_solid">col6 f-col12_s</div></div>
-                        <div class="f-col6 f-col12_s"><div class="f-box f-box_solid">col6 f-col12_s</div></div>
-                    </div>
-
-                    <div class="f-col f-col_mb60_m f-col_mb10_s f-mt40">
-                        <div class="f-col3 f-col6_m f-col12_s"><div class="f-box f-box_solid">col3 f-col6_m f-col12_s</div></div>
-                        <div class="f-col3 f-col6_m f-col12_s"><div class="f-box f-box_solid">col3 f-col6_m f-col12_s</div></div>
-                        <div class="f-col3 f-col6_m f-col12_s"><div class="f-box f-box_solid">col3 f-col6_m f-col12_s</div></div>
-                        <div class="f-col3 f-col6_m f-col12_s"><div class="f-box f-box_solid">col3 f-col6_m f-col12_s</div></div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section class="f-section">
-
-                <div class="f-inner">
-
-                    <h2>Table</h2>
-
-                    <table class="f-table_around">
-                        <tr>
-                            <th class="f-cell2 f-cell12_m">f-cell2 f-cell12_m</th>
-                            <td class="f-cell10 f-cell12_m">f-cell10 f-cell12_m</td>
-                        </tr>
-                    </table>
-
-                    <table class="f-table_around f-mt40">
-                        <tr>
-                            <th class="f-cell6 f-cell12_s">f-cell6 f-cell12_s</th>
-                            <td class="f-cell6 f-cell12_s">f-cell6 f-cell12_s</td>
-                        </tr>
-                    </table>
-
-                </div>
-
-            </section>
-
-            <section class="f-section">
-
-                <div class="f-inner">
-
-                    <h2>Display Table</h2>
-
-                    <div class="f-table">
-                        <div class="f-cell4 f-cell6_m f-cell12_s"><div class="f-box f-box_solid">f-cell4 f-cell6_m f-cell12_s</div></div>
-                        <div class="f-cell8 f-cell6_m f-cell12_s"><div class="f-box f-box_solid">f-cell8 f-cell6_m f-cell12_s</div></div>
-                    </div>
-                    <div class="f-table f-mb20">
-                        <div class="f-cell4 f-cell12_s"><div class="f-box f-box_solid">f-cell4 f-cell12_s</div></div>
-                        <div class="f-cell8 f-cell12_s"><div class="f-box f-box_solid">f-cell8 f-cell12_s</div></div>
-                    </div>
-
-
-                    <section class="f-section">
-
-                        <h3>tableRow</h3>
-                        <div class="f-table">
-                            <div class="f-table_row">
-                                <div class="f-cell8 f-cell4_m f-cell12_s"><div class="f-box f-box_solid">f-cell8 f-cell4_m f-cell12_s</div></div>
-                                <div class="f-cell4 f-cell8_m f-cell12_s"><div class="f-box f-box_solid">f-cell4 f-cell8_m f-cell12_s</div></div>
-                            </div>
-                            <div class="f-table_row">
-                                <div class="f-cell8 f-cell4_m f-cell12_s"><div class="f-box f-box_solid">f-cell8 f-cell4_m f-cell12_s</div></div>
-                                <div class="f-cell4 f-cell8_m f-cell12_s"><div class="f-box f-box_solid">f-cell4 f-cell8_m f-cell12_s</div></div>
-                            </div>
-                        </div>
-
-                    </section>
-
-                    <section class="f-section">
-                    </section>
+                    <div class="u-pt80 u-pb80 u-txt_center">コンテンツが入ります</div>
 
                 </div>
 
@@ -163,14 +146,55 @@
     </div>
     <!-- /#container -->
 
-    <footer>
-        <div class="f-inner">
-            footer
+    <footer class="l-footer">
+        <div class="l-inner">
+
+            <nav class="l-footer__nav">
+                <ul class="u-flex">
+                    <li class="u-flex3 u-flex12_s">
+                        <a href="#">メニュー1</a>
+                    </li>
+                    <li class="u-flex3 u-flex12_s">
+                        <a href="#">メニュー2</a>
+                    </li>
+                    <li class="u-flex3 u-flex12_s j-accordion_menu">
+                        <div class="parents">
+                            <a href="#">メニュー3</a>
+                        </div>
+                        <div class="child">
+                            <ul>
+                                <li><a href="#">メニュー3-1</a></li>
+                                <li><a href="#">メニュー3-2</a></li>
+                                <li><a href="#">メニュー3-3</a></li>
+                                <li><a href="#">メニュー3-4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="u-flex3 u-flex12_s j-accordion_menu">
+                        <div class="parents">
+                            <a href="#">メニュー4</a>
+                        </div>
+                        <div class="child">
+                            <ul>
+                                <li><a href="#">メニュー4-1</a></li>
+                                <li><a href="#">メニュー4-2</a></li>
+                                <li><a href="#">メニュー4-3</a></li>
+                                <li><a href="#">メニュー4-4</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.l-footer__nav -->
+
+            <address class="l-footer__copy">
+                &copy; isobar
+            </address>
         </div>
     </footer>
     <!-- /footer -->
 
-    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
 
 </body>
 
