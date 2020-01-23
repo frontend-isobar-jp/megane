@@ -11,6 +11,9 @@ $ npm i -D megane
 
 // 2. file copy
 $ npx cpx ./node_modules/megane/src/**/**/**/**/ ./src/ && npx cpx ./node_modules/megane/public/**/**/**/**/ ./public/
+
+// 3. install default npm
+$ npm i mgn-menu mgn-ua mgn-utility mgn-accordion mgn-smooth-scroll -S
 ```
 
 ## Download zip file
