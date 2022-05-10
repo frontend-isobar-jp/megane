@@ -7,7 +7,6 @@ import HeaderMenu from './_header_menu';
 import HorizontalScroll from './_horizontal_scroll';
 import AccordionMenu from './_menu_accordion';
 import HoverTouch from './_hover_touch';
-import SmoothScroll from './_smooth_scroll';
 
 ////
 
