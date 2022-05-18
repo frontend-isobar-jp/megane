@@ -4,40 +4,45 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "frontend-isobar-jp <frontend.isobar.jp@gmail.com> (https://github.com/frontend-isobar-jp)",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babelify": "^8.0.0",
-    "browser-sync": "^2.26.7",
-    "browserify": "^16.5.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-changed": "^4.0.2",
-    "gulp-if": "^3.0.0",
-    "gulp-ignore": "^3.0.0",
-    "gulp-load-plugins": "^2.0.2",
-    "gulp-plumber": "^1.2.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify-es": "^2.0.0",
-    "gulp-zip": "^5.0.1",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "mgn-accordion": "0.0.7",
-    "mgn-menu": "0.0.2",
-    "mgn-ua": "0.0.0",
-    "mgn-utility": "0.0.0"
+    "build:dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch --progress",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://frontend-isobar-jp@github.com/frontend-isobar-jp/megane.git"
+    "url": "git+https://github.com/frontend-isobar-jp/megane.git"
   },
+  "keywords": [],
+  "author": "frontend-isobar-jp <frontend.isobar.jp@gmail.com> (https://github.com/frontend-isobar-jp)",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/frontend-isobar-jp/megane/issues"
   },
-  "homepage": "https://github.com/frontend-isobar-jp/megane#readme"
+  "homepage": "https://github.com/frontend-isobar-jp/megane#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.12",
+    "@babel/preset-env": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "prettier": "^2.6.2",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0",
+    "webpack-remove-empty-scripts": "^0.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.22.5"
+  }
 }

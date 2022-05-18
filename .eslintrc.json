@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+  },
+  "extends": [
+      "airbnb-base",
+      "eslint:recommended",
+      "plugin:prettier/recommended",
+      "prettier"
+  ],
+  "plugins": [ "import", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-param-reassign": "warn",
+    "no-plusplus": 0,
+    "no-new": 0,
+    "no-use-before-define": 0,
+    "no-console": 0,
+    "no-unused-vars": "warn",
+    "import/no-unresolved": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "settings": {
+    "import/resolver": {
+        "webpack": {
+            "config": "webpack.config.js"
+        }
+    }
+  }
+}
