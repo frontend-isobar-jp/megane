@@ -1,7 +1,7 @@
 # Megane Template
 
 ## Usage
-[https://megane-template.com/setup/](https://megane-template.com/setup/)
+[https://megane-template.testisobar.com/setup/](https://megane-template.com/setup/)
 
 
 ## npm
